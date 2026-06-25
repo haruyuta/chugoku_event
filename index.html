@@ -25,6 +25,7 @@
     --c-food:#5f9a52;
     --c-nature:#2f978d;
     --c-sport:#3f76b0;
+    --c-dog:#b07a45;
     --shadow:0 1px 3px rgba(22,38,63,.08),0 6px 18px rgba(22,38,63,.06);
   }
   *{box-sizing:border-box;}
@@ -192,7 +193,7 @@
 
 <footer>
   日程・内容は変更になる場合があります。お出かけ前に必ず各公式・主催サイトでご確認ください。<br>
-  データ出典：しまね観光ナビ／松江観光協会／ウォーカープラス／各県観光サイト 等（手動収集・<span id="updated"></span>時点）。<br>
+  データ出典：しまね観光ナビ／松江観光協会／ウォーカープラス／各県観光サイト／鳥取わんにゃん家族・各ドッグイベント公式SNS 等（手動収集・<span id="updated"></span>時点）。<br>
   ※「松江から」の車移動時間は高速道路利用を想定した<strong>概算の目安</strong>です。実際の所要時間は経路・渋滞・出発地点で変動します。<br>
   ※このページは<strong>外部通信なしの単一HTMLファイル</strong>で動作します（オフライン可）。データはファイル内の <code>EVENTS</code> 配列を直接編集して更新してください。更新日は <code>DATA_UPDATED</code> を書き換えます。
 </footer>
@@ -208,7 +209,7 @@
      高速道路利用を想定したおおよその目安で、渋滞や経路で変動します。
    ============================================================ */
 /* === EVENTS（ここを手で編集） === */
-const DATA_UPDATED = "2026-06-24";   // ← 更新したら日付を書き換える
+const DATA_UPDATED = "2026-06-25";   // ← 更新したら日付を書き換える
 let EVENTS = [
   // ── 島根（松江中心） ──────────────────────────────
   {title:"ばけバス〜小泉八雲とセツゆかりの地を訪ねて〜", start:"2026-04-05", end:"2026-06-28", cat:"nature", area:"島根", place:"松江市内", city:"松江市", driveMin:5,
@@ -255,6 +256,16 @@ let EVENTS = [
    desc:"日本三大火祭りの一つ。約600年続く伝統行事で、数万個の紅ちょうちんが街を幻想的に灯す。", url:"https://yamaguchi-tourism.jp/event/detail_12272.html"},
   {title:"関門海峡花火大会（第39回）", start:"2026-08-13", cat:"festival", area:"山口", place:"下関側・門司側", city:"下関市", driveMin:225,
    desc:"海峡両岸から同時打ち上げ、合計約18,000発の西日本最大級。会場周辺に無料エリアなし・協賛チケット制。", url:"https://yamaguchi-tourism.jp/event/detail_10449.html"},
+
+  // ── 犬・ペット ───────────────────────────────────
+  {title:"アミティエフェスタ（毎月開催）", start:null, cat:"dog", area:"鳥取", place:"人と動物の未来センター アミティエ（鳥取県動物愛護センター）", city:"倉吉市", driveMin:85,
+   desc:"保護犬猫の譲渡会、プロ訓練士による犬のしつけ方教室、わんわん運動会などの特別企画も。月替わりで開催。来場時はワクチン・狂犬病予防接種証明書を持参。最新日程は公式で要確認。", url:"https://tottori-inuneko.com/"},
+  {title:"広島わんわん夏まつり2026", start:"2026-08-15", end:"2026-08-16", cat:"dog", area:"広島", place:"広島市中小企業会館 総合展示館（商工センター）", city:"広島市", driveMin:170,
+   desc:"中四国最大級の屋内ドッグマルシェ。1日約100店舗、わんちゃん用フード・服・グッズが集結。室内冷房完備で快適。入場料500円。", url:"https://www.instagram.com/hiroshima_wanwan_event/"},
+  {title:"いぬの杜学園 文化祭", start:"2026-11-08", cat:"dog", area:"広島", place:"旧郷野小学校", city:"安芸高田市", driveMin:120,
+   desc:"廃校になった小学校が1日限定の“犬の楽園”に。教室や校庭を巡るノスタルジックな文化祭スタイルのドッグイベント。入場無料。", url:"https://www.instagram.com/motonarikou/"},
+  {title:"第4回 広島いぬざんまいDogfes", start:"2026-11-29", cat:"dog", area:"広島", place:"観音マリーナ海浜公園", city:"広島市", driveMin:170,
+   desc:"駐車場480台完備の大型ドッグフェス。海辺で一足早いクリスマスグッズや愛犬用品が集結。入場料500円（小学生未満無料）。", url:"https://www.instagram.com/hiroshimainuzanmai/"},
 ];
 /* === EVENTS ここまで === */
 
@@ -266,6 +277,7 @@ const CATS = {
   food:    {label:"グルメ",     color:"var(--c-food)"},
   nature:  {label:"体験・自然", color:"var(--c-nature)"},
   sport:   {label:"スポーツ",   color:"var(--c-sport)"},
+  dog:     {label:"犬・ペット", color:"var(--c-dog)"},
 };
 const AREAS = ["島根","鳥取","岡山","広島","山口"];
 
